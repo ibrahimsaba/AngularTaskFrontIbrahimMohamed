@@ -1,0 +1,30 @@
+<div class="container" @fadeScale>
+  <p-card class="p-shadow-3 p-p-4 department-card">
+    <h3 class="p-text-center p-mb-3">Update Department</h3>
+
+    <div class="p-field p-mb-2">
+      <label for="id">ID</label>
+      <input pInputText id="id" type="number" [(ngModel)]="ndept.id" disabled />
+    </div>
+
+    <div class="p-field p-mb-2">
+      <label for="name">Name</label>
+      <input pInputText id="name" [(ngModel)]="ndept.name" />
+    </div>
+
+    <div class="p-field p-mb-2">
+      <label for="location">Location</label>
+      <p-select
+        [options]="cities"
+        [(ngModel)]="ndept.location"
+        optionLabel="name"
+        optionValue="name"
+        placeholder="Select a Location"
+      ></p-select>
+    </div>
+
+    <div class="p-field p-mt-3">
+      <p-button label="Update" icon="pi pi-check" (click)="update()"></p-button>
+    </div>
+  </p-card>
+</div>

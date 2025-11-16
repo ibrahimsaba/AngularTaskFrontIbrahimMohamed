@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h2>Students Management</h2>
+
+  <app-addstudent (studentadd)="handelAddedStudent($event)"></app-addstudent>
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    class="form-control mb-3"
+    placeholder="Search by ID, Name, or Age"
+  />
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students | studentsearch : searchText; trackBy: trackById">
+        <td>{{ student.id }}</td>
+        <td [class.green]="student.age <= 10" [class.red]="student.age > 10">{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

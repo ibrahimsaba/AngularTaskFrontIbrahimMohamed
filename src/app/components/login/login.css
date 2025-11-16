@@ -1,0 +1,6 @@
+.login-container{max-width:360px;margin:40px auto;padding:20px;border:1px solid #ddd;border-radius:8px}
+.field{margin-bottom:12px}
+label{display:block;margin-bottom:4px}
+input{width:100%;padding:8px}
+.error{color:#b00020;margin:8px 0}
+button{width:100%;padding:10px}

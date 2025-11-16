@@ -1,0 +1,28 @@
+<p-password [(ngModel)]="value" [toggleMask]="true" />
+<br />
+<p-togglebutton [(ngModel)]="checked" onLabel="On" offLabel="Off" class="w-24" />
+<p-rating [(ngModel)]="value">
+  <ng-template #onicon>
+    <img
+      src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+      height="24"
+      width="24"
+    />
+  </ng-template>
+  <ng-template #officon>
+    <img
+      src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+      height="24"
+      width="24"
+    />
+  </ng-template>
+</p-rating>
+<p-multiselect
+  [options]="cities"
+  [(ngModel)]="selectedCities"
+  placeholder="Select Cities"
+  optionLabel="name"
+  display="chip"
+  class="w-full md:w-80"
+/>
+<p-colorpicker [(ngModel)]="color" />

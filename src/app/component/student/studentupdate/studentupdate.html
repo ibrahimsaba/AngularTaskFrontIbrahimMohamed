@@ -1,0 +1,22 @@
+<div class="container" @fadeScale>
+  <p-card class="p-shadow-3 p-p-4 department-card">
+    <h3 class="p-text-center p-mb-3">Update Student</h3>
+
+    <div class="p-field p-mb-2">
+      <label for="id">ID</label>
+      <input pInputText id="id" type="number" [(ngModel)]="nstd.id" disabled />
+    </div>
+
+    <div class="p-field p-mb-2">
+      <label for="name">Name</label>
+      <input pInputText id="name" [(ngModel)]="nstd.name" />
+    </div>
+    <div class="p-field p-mb-2">
+      <label for="name">Age</label>
+      <input pInputText id="name" type="number" [(ngModel)]="nstd.age" />
+    </div>
+    <div class="p-field p-mt-3">
+      <p-button label="Update" icon="pi pi-check" (click)="update()"></p-button>
+    </div>
+  </p-card>
+</div>

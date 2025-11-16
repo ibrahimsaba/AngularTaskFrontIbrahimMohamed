@@ -1,0 +1,6 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <p>Click the button to fetch a token.</p>
+  <div class="error" *ngIf="error">{{ error }}</div>
+  <button (click)="getToken()" [disabled]="loading">{{ loading ? 'Getting token...' : 'Get Token' }}</button>
+</div>
